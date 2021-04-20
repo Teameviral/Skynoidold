@@ -52,12 +52,12 @@
      "LANG_CODE": {
       "description": "Your Language Code Like en, hi exc",
       "value": "en",
-      "required": yes
+      "required": false
     },
     "ASSISTANT_BOT_TOKEN": {
       "description": "Your Bot Token Obtained From @BotFather.",
       "value": "",
-      "required": yes
+      "required": false
     },
     "TIME_COUNTRY": {
       "description": "Your Time Zone",
