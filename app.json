@@ -23,10 +23,6 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-    "MONGO_DB": {
-      "description": "Create A Database In Mongodb And Get URL. Make Sure To Enter Correct URL!",
-      "value": ""
-    },
     "COMMAND_PREFIXES": {
       "description": "Your Command Prefixes like '! . - ^'",
       "value": ".",
@@ -36,7 +32,7 @@
       "description": "Your Postgres Database. Use it as Default",
       "value": "postgres://username:password@localhost:5432/database"
     },
-    "LOG_GRP": {
+    "LOG_GROUP": {
       "description": "A Group ID Where You Want To Log Important Logs.",
       "value": ""
     },
