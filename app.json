@@ -11,8 +11,7 @@
   ],
   "repository": "https://github.com/TeamEviral/Skynoid",
   "website": "https://codetech.org/",
-  "success_url": "t.me/Skynoidbot
-",
+  "success_url": "t.me/Skynoidbot",
   "stack": "container",
   "env": {
     "API_ID": {
