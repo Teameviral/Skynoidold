@@ -31,7 +31,7 @@
       "description": "Your Postgres Database. Use it as Default",
       "value": "postgres://username:password@localhost:5432/database"
     },
-    "LOG_GROUP": {
+    "LOG": {
       "description": "A Group ID Where You Want To Log Important Logs.",
       "value": ""
     },
@@ -45,18 +45,28 @@
     },
     "REPOSITORY": {
       "description": "Your Upstream URL HERE. If You're Beginner, Don't Change This.",
-      "value": "https://github.com/DevsExpo/FridayUserBot",
+      "value": "https://github.com/TeamEviral/Skynoid",
       "required": false
     },
      "LANG_CODE": {
       "description": "Your Language Code Like en, hi exc",
-      "value": "en",
-      "required": false
+      "value": "en"
     },
     "ASSISTANT_BOT_TOKEN": {
       "description": "Your Bot Token Obtained From @BotFather.",
-      "value": "",
-      "required": false
+      "value": ""
+    },
+    "PM_PERMIT": {
+      "description": "Use it As Default",
+      "value": "True"
+    },
+    "REMINDER_UPDATE": {
+      "description": "Use it As Default",
+      "value": "True"
+    },
+    "SKYNOID_IMG": {
+      "description": "Use It As Default",
+      "value": "True"
     },
     "TIME_COUNTRY": {
       "description": "Your Time Zone",
