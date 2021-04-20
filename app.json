@@ -1,0 +1,83 @@
+{
+  "name": "SKYNOID_USERBOT",
+  "description": "A Pyrogram Based Modular UserBot.",
+  "logo": "https://telegra.ph/file/08186572b79c9b45fa08d.jpg",
+  "keywords": [
+    "telegram",
+    "fridaybot",
+    "plugin",
+    "fridaybot",
+    "productivity"
+  ],
+  "repository": "https://github.com/TeamEviral/Skynoid",
+  "website": "https://codetech.org/",
+  "success_url": "t.me/Skynoidbot
+",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "MONGO_DB": {
+      "description": "Create A Database In Mongodb And Get URL. Make Sure To Enter Correct URL!",
+      "value": ""
+    },
+    "COMMAND_PREFIXES": {
+      "description": "Your Command Prefixes like '! . - ^'",
+      "value": ".",
+      "required": false
+    },
+    "DB_URI": {
+      "description": "Your Postgres Database. Use it as Default",
+      "value": "postgres://username:password@localhost:5432/database"
+    },
+    "LOG_GRP": {
+      "description": "A Group ID Where You Want To Log Important Logs.",
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku App Name That You Filled Above.",
+      "value": ""
+    },
+    "REPOSITORY": {
+      "description": "Your Upstream URL HERE. If You're Beginner, Don't Change This.",
+      "value": "https://github.com/DevsExpo/FridayUserBot",
+      "required": false
+    },
+     "LANG_CODE": {
+      "description": "Your Language Code Like en, hi exc",
+      "value": "en",
+      "required": yes
+    },
+    "ASSISTANT_BOT_TOKEN": {
+      "description": "Your Bot Token Obtained From @BotFather.",
+      "value": "",
+      "required": yes
+    },
+    "TIME_COUNTRY": {
+      "description": "Your Time Zone",
+      "value": "None"
+    },
+    "PM_PERMIT": {
+      "description": "Your Pm Permit. Use it true as default.",
+      "value": "True"
+    },
+    "USERBOT_LOAD": {
+      "description": "Your UserBot Load.",
+      "value": ""
+    },  
+    "USERBOT_SESSION": {
+      "description": "Your String Session.",
+      "value": ""
+    }
+  }
+}
