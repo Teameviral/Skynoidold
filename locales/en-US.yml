@@ -1,0 +1,101 @@
+# Language
+language_switch_success_pm: Your language preference has been updated to {}
+language_not_supported: "{} is not supported yet!"
+language_code_not_valid: That's an invalid language code. Use an internationally accepted ISO code!
+language_current_locale: "Current language selection: **{}**"
+language_select_language: "**Select a language** \n"
+# Assistant Help
+inline_help_text: "**Inline Guide**\nJust type `@{} (command)` in text box, and wait for response.\n\n──「 **Get Note from Inline** 」──\n-> `note (*notetag)`\nAnd wait for list of notes in inline, currently supports Text and Button only.\n\n──「 **Stylish Generator Inline** 」──\n-> `stylish (your text)`\nConvert a text to various style, can be used anywhere!\n\n* = Can be used as optional"
+start_message: "**Hi** `{}`,\n**Skynoid is Ready at your Service!**\n~~=====================~~\n - **Python**: `{}`\n - **Userbot**: `{} (v{})`\n - **Assistant**: `Running (v{})`\n - **Database**: `{}`\n - **Group joined**: `{}`\n~~=====================~~\n**For more about the bot press the button down below**"
+help_btn: "Help"
+help_str: "You can use `{}` on your userbot to execute that commands.\nHere is current modules you have\nMain commands available:\n - **/start**: get your bot status\n - **/stats**: get your userbot status\n - **/settings**: settings your userbot\n - **/getme**: get your userbot profile info\n - **/help**: get this menu\n - **/logs**: get bot's console log"
+alive_str: "**[Skynoid](https://github.com/TeamEviral/Skynoid):**\n - **Bot**: `{} (v{})`\n - **Pyrogram**: `{}`\n - **Python**: `{}`\n - **Database**: `{}`\n"
+# Gdrive Assistant
+gdrive_credential_err_heroku: "Looks like you're not logged in to Google drive, but I can help you with that.\n\n    1. [Go here](https://developers.google.com/drive/api/v3/quickstart/python),\nthen click \"Enable the Drive API\".\n    2. Login to your google account (skip this step if you're logged in).\n    3. After logging in, click \"Enable the Drive API\" again.\n    4. Click \"Download Client Configuration\", and download it.\n    5. After downloading it, open it then copy it's content.\n    6.    If it's deployed on Heroku:\n              - Go to dashboard.heroku.com, select your app, go to settings, click \"Reveal Config Vars\".\n           And if it's on Zeet:\n              - Go to zeet.co/dashboard, choose your app, click \"Settings\", scroll down to environment cariables.\n    7. Add a key named `gdrive_credentials` and add the content of the file to it's value.\n\nAfter that, you can go next guide with /gdrive."
+# Adminlist Module
+# Adminlist
+adminlist_one: "**Admins in {}**\n╒═══「 Creator 」\n"
+adminlist_two: "╞══「 {} Human Administrator(s) 」\n"
+adminlist_three: "╞══「 {} Bot Administrator(s) 」\n"
+adminlist_four: "╘══「 Total: {} admins 」"
+# ReportAdmins
+reportadmins_one: "Reported {} to admins."
+reportadmins_two: "Calling admins of {}."
+# tagall
+tagall: "<b>Hey! What's Up</b> 👀"
+# botlist
+botlist_one: "☠️ Deleted Account"
+botlist_two: "**Bots in group {}**\n"
+botlist_three: "╒═══「 Bots 」\n"
+botlist_four: "╘══「 Total: {} bots 」"
+# Admins Module
+# errors
+user_invalid: "`Invalid username`"
+peer_invalid: "`Invalid ID or username`"
+id_invalid: "`Invalid ID`"
+denied_permission: "`Permission denied`"
+# Invite_link
+invite_link: "**Generated invite link for {}:**\n - {}"
+# pin_message
+pin_message: "`Reply a message to pin`"
+# mute
+mute_user: "`Reply a user to mute`"
+# unmute
+unmute_user: "`Reply a user to unmute`"
+# kick
+kick_user: "`Reply a user to kick`"
+# ban
+ban_user: "`Reply a user to ban`"
+# unban
+unban_user: "`Reply a user to unban`"
+# promote
+promote_user: "`Reply a user to promote`"
+# demote
+demote_user: "`Reply a user to demote`"
+# lock
+lock_all: "`Locked all for this chat.`"
+lock_chat: "`Locked {} for this chat.`"
+# Unlock
+unlock_all: "`Unlocked all for this chat.`"
+unlock_invalid: "`Invalid unlock type`"
+unlock_chat: "`Unlocked {} for this chat.`"
+# viewlocks
+permission_view_str: "<b>Chat permissions:</b>\n<b>Sending sessages:</b> {}\n<b>Sending media:</b> {}\n<b>Sending stickers:</b> {}\n<b>Sending animations:</b> {}\n<b>Playing games:</b> {}\n<b>Using inline bots:</b> {}\n<b>Webpage previews:</b> {}\n<b>Making polls:</b> {}\n<b>Changing info:</b> {}\n<b>Inviting users:</b> {}\n<b>Pinning messages:</b> {}\n"
+# SpeedTest Module
+# Speed-Test
+speed_test_trigger: "**Select Speedtest output:**"
+speed_test_running: "**Running a speedtest..**"
+# Gdrive Assistant
+gdrive_credential_err: "Looks like you're not logged in to Google drive, but I can help you with that.\n\n    1. [Go here](https://developers.google.com/drive/api/v3/quickstart/python),\nthen click \"Enable the Drive API\".\n    2. Login to your google account (skip this step if you're logged in).\n    3. After logging in, click \"Enable the Drive API\" again.\n    4. Click \"Download Client Configuration\", and download it.\n    5. After downloading it, open it then copy it's content.\n    6. Come back to Telegram, type `.credentials`, then a space, paste the file content and then send.\n\nAfter that, you can go next guide with /gdrive."
+# Settings Module
+settings_userbot_repo: "[<b>Skynoid</b>]({})\n"
+settings_userbot_stop: " - **Userbot**: `Stopped (v{})`\n"
+settings_userbot_running: " - **Userbot**: `Running (v{})`\n"
+settings_assistant_running: " - **Assistant**: `Running (v{})`\n"
+settings_database: " - **Database**: `{}`\n"
+settings_python: " - **Python**: `{}`\n"
+settings_userbot_stopbutton: "Stop Bot"
+settings_userbot_startbutton: "Start Bot"
+settings_userbot_restartbutton: "Restart Bot"
+settings_setstickerbutton: "Set Sticker"
+settings_change_repo_button: "Change Repo Source"
+settings_stats_botstart: "\n✅ Bot was started!"
+settings_stats_botstop: "\n❎ Bot was stopped!"
+settings_stats_botrestart: "\n✅ Bot was restarted!"
+settings_bot_stoprestart_err: "Userbot Already Stopped! Abort Restart"
+settings_bot_restarting: "Please wait for bot restarting..."
+speed_test_result: "**Speedtest Results:**"
+speed_test_isp: "**ISP:**"
+speed_test_download: "**Download:**"
+speed_test_upload: "**Upload:**"
+speed_test_ping: "**Ping:**"
+speed_test_button_text: "Text"
+speed_test_button_image: "Image"
+language_btn: "Language"
+# Updater
+updater_available_text: "**New UPDATE available for [{}]!**\n\n"
+update_now_btn: "🔄 Update Now!"
+update_successful: "**Updated successfully!**\n"
+update_welcome: "🎉 Welcome To Skynoid v{} & Assistant v{}!\n"
+updated_changelog: "\n──「 **Update changelogs** 」──\n"
+update_successful_force: "Force updated successfully!"
