@@ -63,14 +63,6 @@
       "description": "Your Time Zone",
       "value": "None"
     },
-    "PM_PERMIT": {
-      "description": "Your Pm Permit. Use it true as default.",
-      "value": "True"
-    },
-    "USERBOT_LOAD": {
-      "description": "Your UserBot Load.",
-      "value": ""
-    },  
     "USERBOT_SESSION": {
       "description": "Your String Session.",
       "value": ""
