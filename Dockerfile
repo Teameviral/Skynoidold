@@ -55,7 +55,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 
-# Copy Python Requirements to /root/nana
+# Copy Python Requirements to /root/skynoid
 WORKDIR /app/
 
 ENV ENV True
