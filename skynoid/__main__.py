@@ -56,10 +56,10 @@ async def reboot():
     # Assistant bot
     for setting in ALL_SETTINGS:
         imported_module = importlib.import_module(
-            'nana.plugins.assistant.' + setting,
+            'skynoid.plugins.assistant.' + setting,
         )
         importlib.reload(imported_module)
-    # Nana userbot
+    # Skynoid userbot
     for modul in ALL_MODULES:
         imported_module = importlib.import_module('skynoid.plugins.' + modul)
         if hasattr(
