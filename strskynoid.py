@@ -1,5 +1,4 @@
 import asyncio
-
 from pyrogram import Client
 from configparser import ConfigParser
 from configparser import NoOptionError
