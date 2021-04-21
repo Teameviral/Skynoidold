@@ -1,7 +1,7 @@
-from nana.utils.msg_types import Types
-from nana import DB_AVAILABLE, Owner, setbot
-from nana.utils.string import parse_button
-from nana.utils.string import build_keyboard
+from skynoid.utils.msg_types import Types
+from skynoid import DB_AVAILABLE, Owner, setbot
+from skynoid.utils.string import parse_button
+from skynoid.utils.string import build_keyboard
 
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
