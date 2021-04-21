@@ -6,12 +6,12 @@ from .inline_mod import pmpermit_func
 from .inline_mod import speedtest_func
 from .inline_mod import stylish_func
 from .inline_mod import inline_search
-from nana import AdminSettings
-from nana import DB_AVAILABLE
-from nana import Owner
-from nana import OwnerName
-from nana import setbot
-from nana.plugins.database import anime_db as sql
+from skynoid import AdminSettings
+from skynoid import DB_AVAILABLE
+from skynoid import Owner
+from skynoid import OwnerName
+from skynoid import setbot
+from skynoid.plugins.database import anime_db as sql
 
 
 @setbot.on_inline_query()
