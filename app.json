@@ -22,7 +22,15 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-    "COMMAND_PREFIXES": {
+    "OWNER": {
+      "description": "Your Account Id. Get it by using @HaritaRobot",
+      "value": ""
+    },
+    "OWNERUSERNAME": {
+      "description": "Your Telegram Username without @",
+      "value": ""
+    },
+    "COMMAND": {
       "description": "Your Command Prefixes like '! . - ^'",
       "value": ".",
       "required": false
@@ -31,16 +39,16 @@
       "description": "Your Postgres Database. Use it as Default",
       "value": "postgres://username:password@localhost:5432/database"
     },
-    "LOG": {
-      "description": "A Group ID Where You Want To Log Important Logs.",
+    "LOGGER": {
+      "description": "LEAVE IT AS IT IS",
+      "value": "True"
+    },
+    "AdminSettings": {
+      "description": "Put your sudo users id here.",
       "value": ""
     },
-    "HEROKU_API_KEY": {
-      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.",
-      "value": ""
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Heroku App Name That You Filled Above.",
+    "Logs": {
+      "description": "A group is where all Logs will be saved.",
       "value": ""
     },
     "REPOSITORY": {
