@@ -4,9 +4,9 @@ from pydrive import auth
 from pydrive.drive import GoogleDrive
 from pyrogram import filters
 
-from nana import setbot, AdminSettings, gauth, GDRIVE_CREDENTIALS, ENV
-from nana.languages.strings import tld
-from nana.utils import filt
+from skynoid import setbot, AdminSettings, gauth, GDRIVE_CREDENTIALS, ENV
+from skynoid.languages.strings import tld
+from skynoid.utils import filt
 
 
 @setbot.on_message(filters.user(AdminSettings) & filt.command(['gdrive']))
@@ -26,7 +26,7 @@ async def gdrive_helper(_, message):
             await message.reply(tld('gdrive_credential_err'))
             return
 
-        gauth.LoadCredentialsFile('nana/session/drive')
+        gauth.LoadCredentialsFile('skynoid/session/drive')
         if gauth.credentials is None:
             try:
                 authurl = gauth.GetAuthUrl()
@@ -63,20 +63,20 @@ async def gdrive_helper(_, message):
         except auth.AuthenticationError:
             await message.reply('Your Authentication code is Wrong!')
             return
-        gauth.SaveCredentialsFile('nana/session/drive')
+        gauth.SaveCredentialsFile('skynoid/session/drive')
         drive = GoogleDrive(gauth)
         file_list = drive.ListFile(
             {'q': "'root' in parents and trashed=false"},
         ).GetList()
         for drivefolders in file_list:
-            if drivefolders['title'] == 'Nana Drive':
+            if drivefolders['title'] == 'Skynoid Drive':
                 await message.reply(
                     'Authentication successful!\nWelcome back!',
                 )
                 return
         mkdir = drive.CreateFile(
             {
-                'title': 'Nana Drive',
+                'title': 'Skynoid Drive',
                 'mimeType': 'application/vnd.google-apps.folder',
             },
         )
