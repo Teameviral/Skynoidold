@@ -8,10 +8,10 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 
-from nana import NANA_IMG
-from nana import setbot
-from nana.__main__ import restart_all
-from nana.utils.dynamic_filt import dynamic_data_filter
+from Skynoid import SKYNOID_IMG
+from Skynoid import setbot
+from Skynoid.__main__ import restart_all
+from Skynoid.utils.dynamic_filt import dynamic_data_filter
 
 
 try:
