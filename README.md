@@ -1,3 +1,4 @@
+![Skynoid](https://telegra.ph/file/7a4d669a66abae232d029.jpg)
 # Skynoid
 A Modular Pyrogram Based Telegram Userbot with an Assistant
 
