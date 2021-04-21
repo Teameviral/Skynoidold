@@ -1,6 +1,6 @@
-from nana.plugins.database.lang_db import switch_to_locale, prev_locale
-from nana.languages.strings import tld
-from nana.languages.list_locale import list_locales
+from skynoid.plugins.database.lang_db import switch_to_locale, prev_locale
+from skynoid.languages.strings import tld
+from skynoid.languages.list_locale import list_locales
 import re
 
 from pyrogram import filters, errors
@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardButton
 
 from pykeyboard import InlineKeyboard
 
-from nana import setbot, Owner
+from skynoid import setbot, Owner
 
 
 async def language_button_callback(_, __, query):
