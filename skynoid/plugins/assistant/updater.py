@@ -2,7 +2,7 @@ import random
 from git import Repo
 from git.exc import GitCommandError, NoSuchPathError, InvalidGitRepositoryError
 from pyrogram.types import InlineKeyboardButton
-from nana import (
+from skynoid import (
     setbot,
     Owner,
     USERBOT_VERSION,
@@ -13,9 +13,9 @@ from nana import (
     RANDOM_STICKERS,
     REMINDER_UPDATE,
 )
-from nana.__main__ import restart_all, loop
-from nana.utils.dynamic_filt import dynamic_data_filter
-from nana.languages.strings import tld
+from skynoid.__main__ import restart_all, loop
+from skynoid.utils.dynamic_filt import dynamic_data_filter
+from skynoid.languages.strings import tld
 from pykeyboard import InlineKeyboard
 
 
@@ -133,9 +133,9 @@ async def update_button(client, query):
         await client.send_message(Owner, tld('update_successful'))
     except GitCommandError:
         repo.git.reset('--hard')
-        repo.git.clean('-fd', 'nana/modules/')
-        repo.git.clean('-fd', 'nana/assistant/')
-        repo.git.clean('-fd', 'nana/utils/')
+        repo.git.clean('-fd', 'skynoid/modules/')
+        repo.git.clean('-fd', 'skynoid/assistant/')
+        repo.git.clean('-fd', 'skynoid/utils/')
         await client.send_message(Owner, tld('update_successful_force'))
     await update_changelog(changelog)
     await restart_all()
