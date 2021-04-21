@@ -4,7 +4,7 @@ from pyrogram.types import InputTextMessageContent
 
 from pykeyboard import InlineKeyboard
 
-from nana import Owner
+from skynoid import Owner
 
 
 async def fav_func(fav, answers):
