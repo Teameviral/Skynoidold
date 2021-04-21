@@ -26,7 +26,7 @@ async def chng_branch(_, query):
         [InlineKeyboardButton(r, callback_data=f'chng_branch_{r}')]
         for r in repo.branches
     ]
-    if NANA_IMG:
+    if SKYNOID_IMG:
         await query.message.edit_caption(
             '**[#] Which branch would you like to change to?**\n' +
             f' - Currently activated: `[{repo.active_branch}]`\n\n' +
