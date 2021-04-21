@@ -1,8 +1,8 @@
 from nekobin import NekoBin
-from nana import setbot
-from nana import AdminSettings
-from nana.utils.dynamic_filt import dynamic_data_filter
-from nana.utils import filt
+from skynoid import setbot
+from skynoid import AdminSettings
+from skynoid.utils.dynamic_filt import dynamic_data_filter
+from skynoid.utils import filt
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
@@ -21,7 +21,7 @@ async def logs(_, message):
             InlineKeyboardButton('~ Nekofy', callback_data='nekofy'),
         )
         await message.reply_document(
-            'nana/logs/error.txt',
+            'skynoid/logs/error.txt',
             caption='Here are your logs!',
             reply_markup=keyboard,
         )
@@ -34,7 +34,7 @@ async def logs(_, message):
 async def paste_log_neko(client, query):
     nekobin = NekoBin()
     if query.from_user.id in AdminSettings:
-        with open('nana/logs/error.txt') as f:
+        with open('skynoid/logs/error.txt') as f:
             data = await nekobin.nekofy(f.read())
         keyb = InlineKeyboard(row_width=2)
         keyb.add(
