@@ -6,23 +6,23 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 from pykeyboard import InlineKeyboard
 
-from nana import AdminSettings
-from nana import app
-from nana import ASSISTANT_VERSION
-from nana import BotUsername
-from nana import DB_AVAILABLE
-from nana import NANA_IMG
-from nana import OwnerName
-from nana import setbot
-from nana import USERBOT_VERSION
-from nana.languages.strings import tld
-from nana.utils import filt
-from nana.plugins.assistant.settings import get_button_settings
-from nana.plugins.assistant.settings import get_text_settings
-from nana.utils.dynamic_filt import dynamic_data_filter
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import ASSISTANT_VERSION
+from skynoid import BotUsername
+from skynoid import DB_AVAILABLE
+from skynoid import NANA_IMG
+from skynoid import OwnerName
+from skynoid import setbot
+from skynoid import USERBOT_VERSION
+from skynoid.languages.strings import tld
+from skynoid.utils import filt
+from skynoid.plugins.assistant.settings import get_button_settings
+from skynoid.plugins.assistant.settings import get_text_settings
+from skynoid.utils.dynamic_filt import dynamic_data_filter
 
 if DB_AVAILABLE:
-    from nana.plugins.database.chats_db import get_all_chats
+    from skynoid.plugins.database.chats_db import get_all_chats
 
 
 @setbot.on_message(filters.private & ~filters.user(AdminSettings))
@@ -39,12 +39,12 @@ Here are some links for you
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
-            'Documentation', url='https://aman-a.gitbook.io/nana-remix/',
+            'Documentation', url='https://t.me/SkinoidBot',
         ),
         InlineKeyboardButton(
-            'Repository', url='https://github.com/pokurt/Nana-Remix',
+            'Repository', url='https://github.com/TeamEviral/Skynoid',
         ),
-        InlineKeyboardButton('Support', url='https://t.me/nanabotsupport'),
+        InlineKeyboardButton('Support', url='https://t.me/SkynoidSupport'),
     )
     await message.reply(msg, reply_markup=buttons)
 
@@ -119,7 +119,7 @@ async def get_myself(client, message):
     if me.username:
         text += f' - **Username**: `@{me.username}`\n'
     text += f' - **Phone number**: `{me.phone_number}`\n'
-    text += f' - **Nana Version**: `v{USERBOT_VERSION}`\n'
+    text += f' - **Skynoid Version**: `v{USERBOT_VERSION}`\n'
     text += f' - **Manager Version**: `v{ASSISTANT_VERSION}`'
     button = InlineKeyboard(row_width=1)
     button.add(
@@ -202,18 +202,18 @@ async def lang_back(_, query):
 
 @setbot.on_callback_query(dynamic_data_filter('report_errors'))
 async def report_some_errors(client, query):
-    await app.join_chat('@nanabotsupport')
-    text = 'Hi @DeprecatedUser, i got an error for you.'
+    await app.join_chat('@SkynoidSupport')
+    text = 'Hi @Eviral, i got an error for you.'
     err = query.message.text
-    with open('nana/cache/errors.txt', 'w') as f:
+    with open('skynoid/cache/errors.txt', 'w') as f:
         f.write(err)
     await asyncio.gather(
         query.message.edit_reply_markup(reply_markup=None),
         app.send_document(
-            'nanabotsupport',
-            'nana/cache/errors.txt',
+            'SkynoidSupport',
+            'skynoid/cache/errors.txt',
             caption=text,
         ),
         client.answer_callback_query(query.id, 'Report was sent!'),
     )
-    os.remove('nana/cache/errors.txt')
+    os.remove('skynoid/cache/errors.txt')
