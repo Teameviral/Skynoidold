@@ -1,9 +1,9 @@
 """
 initial assistant's modules
 """
-from nana import ASSISTANT_LOAD
-from nana import ASSISTANT_NOLOAD
-from nana import log
+from skynoid import ASSISTANT_LOAD
+from skynoid import ASSISTANT_NOLOAD
+from skynoid import log
 
 
 def __list_all_modules():
