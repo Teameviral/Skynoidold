@@ -4,7 +4,7 @@ from pyrogram.types import InputTextMessageContent
 
 from pykeyboard import InlineKeyboard
 
-from nana.languages.strings import tld
+from skynoid.languages.strings import tld
 
 
 async def speedtest_func(answers):
