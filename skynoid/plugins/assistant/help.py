@@ -6,24 +6,24 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.raw import functions
 
-from nana import (
+from skynoid import (
     setbot,
     AdminSettings,
     COMMAND_PREFIXES,
     DB_AVAILABLE,
-    NANA_IMG,
+    SKYNOID_IMG,
     BotUsername,
     app,
     StartTime,
 )
-from nana.utils import filt
-from nana.utils.misc import paginate_modules
-from nana.plugins.chats import get_msgc
-from nana.languages.strings import tld
+from skynoid.utils import filt
+from skynoid.utils.misc import paginate_modules
+from skynoid.plugins.chats import get_msgc
+from skynoid.languages.strings import tld
 
 if DB_AVAILABLE:
-    from nana.plugins.database.chats_db import get_all_chats
-    from nana.plugins.database.notes_db import get_all_selfnotes
+    from skynoid.plugins.database.chats_db import get_all_chats
+    from skynoid.plugins.database.notes_db import get_all_selfnotes
 
 
 def get_readable_time(seconds: int) -> str:
@@ -162,5 +162,5 @@ async def stats(_, message):
         get_msgc(),
     )
     uptime = get_readable_time(time.time() - StartTime)
-    text += f' - **Nana uptime**: `{uptime}`'
+    text += f' - **Skynoid uptime**: `{uptime}`'
     await message.reply_text(text, quote=True)
