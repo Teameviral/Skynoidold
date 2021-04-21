@@ -7,10 +7,10 @@ from io import StringIO
 
 from pyrogram import filters
 
-from nana import Owner
-from nana import setbot
-from nana.utils import filt
-from nana.plugins.devs import aexec
+from Skynoid import Owner
+from Skynoid import setbot
+from Skynoid.utils import filt
+from Skynoid.plugins.devs import aexec
 
 
 @setbot.on_message(filters.user(Owner) & filt.command(['eval']))
@@ -111,7 +111,7 @@ async def terminal(client, message):
         output = None
     if output:
         if len(output) > 4096:
-            with open('nana/cache/output.txt', 'w+') as file:
+            with open('skynoid/cache/output.txt', 'w+') as file:
                 file.write(output)
                 file.close()
             await client.send_document(
@@ -120,7 +120,7 @@ async def terminal(client, message):
                 reply_to_message_id=message.message_id,
                 caption='`Output file`',
             )
-            os.remove('nana/cache/output.txt')
+            os.remove('skynoid/cache/output.txt')
             return
         await message.reply(
             f'**Output:**\n```{output}```',
