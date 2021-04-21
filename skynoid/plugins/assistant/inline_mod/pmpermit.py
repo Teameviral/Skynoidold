@@ -4,7 +4,7 @@ from pyrogram.types import InputTextMessageContent
 
 from pykeyboard import InlineKeyboard
 
-from nana.plugins.pm import welc_txt
+from skynoid.plugins.pm import welc_txt
 
 
 async def pmpermit_func(answers):
