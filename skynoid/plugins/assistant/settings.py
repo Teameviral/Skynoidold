@@ -3,20 +3,20 @@ from platform import python_version
 from pyrogram import filters, errors
 from pyrogram.types import InlineKeyboardButton
 from pykeyboard import InlineKeyboard
-from nana import (
+from skynoid import (
     AdminSettings,
     setbot,
     app,
     USERBOT_VERSION,
     ASSISTANT_VERSION,
     DB_AVAILABLE,
-    NANA_IMG,
+    SKYNOID_IMG,
     REPOSITORY,
 )
-from nana.__main__ import reload_userbot, restart_all
-from nana.utils import filt
-from nana.utils.dynamic_filt import dynamic_data_filter
-from nana.languages.strings import tld
+from skynoid.__main__ import reload_userbot, restart_all
+from skynoid.utils import filt
+from skynoid.utils.dynamic_filt import dynamic_data_filter
+from skynoid.languages.strings import tld
 
 
 async def is_userbot_run():
@@ -135,7 +135,7 @@ async def reboot_bot(client, query):
 async def back(_, message):
     text = await get_text_settings()
     button = await get_button_settings()
-    if NANA_IMG:
-        await message.reply_photo(NANA_IMG, caption=text, reply_markup=button)
+    if SKYNOID_IMG:
+        await message.reply_photo(SKYNOID_IMG, caption=text, reply_markup=button)
     else:
         await message.reply(text, reply_markup=button)
