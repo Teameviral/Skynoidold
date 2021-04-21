@@ -1,6 +1,6 @@
 from sqlalchemy import Column, UnicodeText, Integer
 
-from nana import BASE, SESSION
+from skynoid import BASE, SESSION
 
 
 class StickerSet(BASE):
