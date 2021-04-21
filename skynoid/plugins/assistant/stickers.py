@@ -8,16 +8,16 @@ from pyrogram.types import ReplyKeyboardMarkup
 
 from .settings import get_button_settings
 from .settings import get_text_settings
-from nana import AdminSettings
-from nana import app
-from nana import DB_AVAILABLE
-from nana import NANA_IMG
-from nana import Owner
-from nana import setbot
-from nana.utils import filt
-from nana.plugins.assistant.database.stickers_db import set_stanim_set
-from nana.plugins.assistant.database.stickers_db import set_sticker_set
-from nana.utils.dynamic_filt import dynamic_data_filter
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import DB_AVAILABLE
+from skynoid import NANA_IMG
+from skynoid import Owner
+from skynoid import setbot
+from skynoid.utils import filt
+from skynoid.plugins.assistant.database.stickers_db import set_stanim_set
+from skynoid.plugins.assistant.database.stickers_db import set_sticker_set
+from skynoid.utils.dynamic_filt import dynamic_data_filter
 
 TEMP_KEYBOARD = []
 USER_SET = {}
@@ -107,10 +107,10 @@ async def set_stickers(client, message):
     text = await get_text_settings()
     text += f'\n{status}'
     button = await get_button_settings()
-    if NANA_IMG:
+    if SKYNOID_IMG:
         await setbot.send_photo(
             message.chat.id,
-            NANA_IMG,
+            SKYNOID_IMG,
             caption=text,
             reply_markup=button,
         )
