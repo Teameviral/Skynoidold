@@ -48,7 +48,7 @@
       "value": ""
     },
     "Logs": {
-      "description": "A group is where all Logs will be saved.",
+      "description": "A group id where all Logs will be saved.",
       "value": ""
     },
     "REPOSITORY": {
