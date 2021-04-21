@@ -4,7 +4,7 @@ from pyrogram.types import InputTextMessageContent
 
 from pykeyboard import InlineKeyboard
 
-from nana import app
+from skynoid import app
 
 
 async def inline_search(string, answers):
