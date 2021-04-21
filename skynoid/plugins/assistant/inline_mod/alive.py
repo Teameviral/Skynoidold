@@ -4,8 +4,8 @@ from pyrogram.types import InputTextMessageContent
 
 from pykeyboard import InlineKeyboard
 
-from nana import app, USERBOT_VERSION, DB_AVAILABLE
-from nana.languages.strings import tld
+from skynoid import app, USERBOT_VERSION, DB_AVAILABLE
+from skynoid.languages.strings import tld
 
 from pyrogram import __version__
 from platform import python_version
@@ -27,7 +27,7 @@ async def alive_func(answers):
     answers.append(
         InlineQueryResultArticle(
             title='Alive',
-            description='Nana Userbot',
+            description='Skynoid Userbot',
             input_message_content=InputTextMessageContent(
                 tld('alive_str').format(
                     nana_stats,
