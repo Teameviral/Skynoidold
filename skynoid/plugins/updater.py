@@ -47,7 +47,7 @@ async def gen_chlog(repo, diff):
 
 
 async def initial_git(repo):
-    isexist = os.path.exists('nana-old')
+    isexist = os.path.exists('skynoid-old')
     if isexist:
         shutil.rmtree('skynoid-old')
     os.mkdir('skynoid-old')
