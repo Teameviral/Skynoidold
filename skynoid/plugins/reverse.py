@@ -12,14 +12,14 @@ from bs4 import BeautifulSoup
 from pyrogram import filters
 import aiohttp
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import logging
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import logging
+from skynoid.utils.Pyroutils import ReplyCheck
 
-__MODULE__ = 'Reverse'
+__MODULE__ = '▲ Reverse ▼'
 __HELP__ = """
 This module will help you Reverse Search Media
 
@@ -33,7 +33,7 @@ Anime reverse search any supported media by tracemoe
 
 """
 
-screen_shot = 'nana/downloads/'
+screen_shot = 'skynoid/downloads/'
 
 _LOG = logging.getLogger(__name__)
 
@@ -182,9 +182,9 @@ async def tracemoe_rs(client, message):
             )
             await client.download_media(
                 message.reply_to_message.video,
-                file_name='nana/downloads/' + nama,
+                file_name='skynoid/downloads/' + nama,
             )
-            dis_loc = 'nana/downloads/' + nama
+            dis_loc = 'skynoid/downloads/' + nama
             img_file = os.path.join(screen_shot, 'grs.jpg')
             await take_screen_shot(dis_loc, 0, img_file)
             if not os.path.lexists(img_file):
