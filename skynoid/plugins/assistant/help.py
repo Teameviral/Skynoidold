@@ -56,10 +56,10 @@ async def help_parser(client, chat_id, text, keyboard=None):
         keyboard = InlineKeyboardMarkup(
             paginate_modules(0, HELP_COMMANDS, 'help'),
         )
-    if NANA_IMG:
+    if SKYNOID_IMG:
         await client.send_photo(
             chat_id,
-            NANA_IMG,
+            SKYNOID_IMG,
             caption=text,
             reply_markup=keyboard,
         )
