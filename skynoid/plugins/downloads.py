@@ -11,12 +11,12 @@ from bs4 import BeautifulSoup
 from pyDownload import Downloader
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
 
-__MODULE__ = 'Downloads'
+__MODULE__ = '▲ Downloads ▼'
 __HELP__ = """
 Download any file from a URL or Telegram.
 
@@ -119,7 +119,7 @@ async def download_from_url(_, message):
         await edit_or_reply(message, text='Invaild args given!')
         return
     try:
-        os.listdir('nana/downloads/')
+        os.listdir('skynoid/downloads/')
     except FileNotFoundError:
         await edit_or_reply(
             message,
