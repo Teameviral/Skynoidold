@@ -3,13 +3,13 @@ import re
 import speedtest
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import BotUsername
-from nana import COMMAND_PREFIXES
-from nana import setbot
-from nana.languages.strings import tld
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import BotUsername
+from skynoid import COMMAND_PREFIXES
+from skynoid import setbot
+from skynoid.languages.strings import tld
+from skynoid.utils.Pyroutils import ReplyCheck
 
 
 def speedtest_callback(_, __, query):
