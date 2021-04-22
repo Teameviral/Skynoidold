@@ -41,18 +41,18 @@ async def tfsh(client, message):
     name_file_upload = name[-10:] if len(name) > 10 else name
     name_file_upload.encode('ascii', 'ignore')
     os.rename(
-        fr'nana/downloads/{name}',
-        fr'nana/downloads/{name_file_upload}',
+        fr'skynoid/downloads/{name}',
+        fr'skynoid/downloads/{name_file_upload}',
     )
     await edit_or_reply(
         message,
         text=await send_to_keepsh(
-            f'nana/downloads/{name_file_upload}',
+            f'skynoid/downloads/{name_file_upload}',
             message, name_file_upload,
         ),
         disable_web_page_preview=True,
     )
-    os.remove(f'nana/downloads/{name_file_upload}')
+    os.remove(f'skynoid/downloads/{name_file_upload}')
     return
 
 
