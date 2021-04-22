@@ -1,10 +1,10 @@
-from nana import AdminSettings, COMMAND_PREFIXES, edit_or_reply, app
+from skynoid import AdminSettings, COMMAND_PREFIXES, edit_or_reply, app
 from pyrogram import filters, errors
 from pyrogram.types import ChatPermissions
-from nana.utils.capture_errors import capture_err
-from nana.utils.string import extract_time
-from nana.utils.parser import user_time_and_reason, time_parser_int
-from nana.languages.strings import tld
+from skynoid.utils.capture_errors import capture_err
+from skynoid.utils.string import extract_time
+from skynoid.utils.parser import user_time_and_reason, time_parser_int
+from skynoid.languages.strings import tld
 
 
 import time
@@ -16,7 +16,7 @@ Temporarily Restrict Users (Requires Admin Rights)
 
 ──「 **Temporary Ban** 」──
 -> `tban`
-Temporarily ban a user with given time: `tban @dank_as_fuck 69m`
+Temporarily ban a user with given time: `tban @username 69m`
 
 """
 
@@ -40,7 +40,7 @@ async def tempmute(client, message):
     if not message.reply_to_message and len(message.command) == 2:
         await edit_or_reply(
             message,
-            text='@dank_as_fuck please fix this string asap.',
+            text='@Eviral please fix this string asap.',
         )
         return
 
@@ -87,7 +87,7 @@ async def temp_ban(_, message):
     if not message.reply_to_message and len(message.command) == 2:
         await edit_or_reply(
             message,
-            text='`@dank_as_fuck please fix this string`',
+            text='`@Eviral please fix this string`',
         )
         return
 
