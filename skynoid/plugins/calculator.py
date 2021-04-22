@@ -6,7 +6,7 @@ from nana import app
 from nana import COMMAND_PREFIXES
 from nana import edit_or_reply
 
-__MODULE__ = 'Calculator'
+__MODULE__ = '▲ Calculator ▼'
 __HELP__ = """
 Module for calculation, convertion, and etc.
 
