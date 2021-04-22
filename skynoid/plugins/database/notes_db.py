@@ -4,9 +4,9 @@ from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import UnicodeText
 
-from nana import BASE
-from nana import SESSION
-from nana.utils.msg_types import Types
+from skynoid import BASE
+from skynoid import SESSION
+from skynoid.utils.msg_types import Types
 
 
 class SelfNotes(BASE):
