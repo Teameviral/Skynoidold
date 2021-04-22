@@ -1,16 +1,14 @@
 from datetime import datetime
 
-import spamwatch
 from pyrogram import filters
 from pyrogram.errors import PeerIdInvalid
 from pyrogram.raw import functions
 from pyrogram.types import User
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import SPAMWATCH_API
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
 
 __MODULE__ = 'Whois'
 __HELP__ = """
@@ -91,13 +89,7 @@ async def parse_info(client, info):
         user_info += f'│ • **Last Name:** {info.last_name}\n'
     if info.dc_id:
         user_info += f'│ • **DC:** `{info.dc_id}`\n'
-    if SPAMWATCH_API:
-        sw = spamwatch.Client(SPAMWATCH_API)
-        sw_stats = sw.get_ban(info.id)
-        if sw_stats:
-            user_info += '│ • **SW Blocked:** `{}`\n'.format(
-                sw_stats.reason,
-            )
+    
     if info.username:
         user_info += f'│ • **Username:** @{info.username}\n'
     if not info.is_self:
