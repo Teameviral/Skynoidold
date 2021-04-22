@@ -2,15 +2,15 @@ import time
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import BotUsername
-from nana import COMMAND_PREFIXES
-from nana import OwnerUsername
-from nana import setbot
-from nana import StartTime
-from nana.utils.dynamic_filt import dynamic_data_filter
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import BotUsername
+from skynoid import COMMAND_PREFIXES
+from skynoid import OwnerUsername
+from skynoid import setbot
+from skynoid import StartTime
+from skynoid.utils.dynamic_filt import dynamic_data_filter
+from skynoid.utils.Pyroutils import ReplyCheck
 
 
 def get_readable_time(seconds: int) -> str:
@@ -44,7 +44,7 @@ def get_readable_time(seconds: int) -> str:
 async def alivemsg_callback(client, query):
     start_time = time.time()
     uptime = get_readable_time(time.time() - StartTime)
-    reply_msg = f'{OwnerUsername.lower()}@nana-remix\n'
+    reply_msg = f'{OwnerUsername.lower()}@Skynoid\n'
     reply_msg += '------------------\n'
     end_time = time.time()
     ping_time = round((end_time - start_time) * 1000, 3)
