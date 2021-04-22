@@ -149,7 +149,7 @@ async def clone(client, message):
             my_self['about'],
         )
     q = await app.get_profile_photos(target)
-    dl = await client.download_media(q[0], file_name='nana/downloads/pp.png')
+    dl = await client.download_media(q[0], file_name='skynoid/downloads/pp.png')
     await app.set_profile_photo(photo='skynoid/downloads/pp.png')
     t = await app.get_users(target)
     t = await client.send(
