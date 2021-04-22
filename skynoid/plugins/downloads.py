@@ -95,7 +95,7 @@ async def download_url(url, file_name):
         downlaoded += '\n💿 File size: `' + str(file_size) + ' Byte`\n'
 
     try:
-        os.rename(downloader.file_name, 'nana/downloads/' + file_name)
+        os.rename(downloader.file_name, 'skynoid/downloads/' + file_name)
     except OSError:
         return 'Failed to download file\nInvaild file name!'
     return downlaoded
@@ -489,7 +489,7 @@ async def download_reply_nocall(client, message):
             message.reply_to_message.video.file_size,
         )
         await client.download_media(
-            message.reply_to_message.video, file_name='nana/downloads/' + nama,
+            message.reply_to_message.video, file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.sticker:
         nama = 'sticker_{}_{}.webp'.format(
