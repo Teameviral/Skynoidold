@@ -17,7 +17,7 @@ async def alive_func(answers):
         me = await app.get_me()
     except ConnectionError:
         me = None
-    nana_stats = 'stopped' if not me else 'alive'
+    skynoid_stats = 'stopped' if not me else 'alive'
     buttons.add(
         InlineKeyboardButton(
             '🏓',
@@ -30,7 +30,7 @@ async def alive_func(answers):
             description='Skynoid Userbot',
             input_message_content=InputTextMessageContent(
                 tld('alive_str').format(
-                    nana_stats,
+                    skynoid_stats,
                     USERBOT_VERSION,
                     __version__,
                     python_version(),
