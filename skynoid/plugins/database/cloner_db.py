@@ -2,9 +2,9 @@ from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import UnicodeText
 
-from nana import BASE
-from nana import Owner
-from nana import SESSION
+from skynoid import BASE
+from skynoid import Owner
+from skynoid import SESSION
 
 
 class Cloner(BASE):
