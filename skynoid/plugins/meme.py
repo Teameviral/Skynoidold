@@ -8,14 +8,14 @@ import aiohttp
 from pyrogram import filters
 from pyrogram.raw import functions
 
-import nana.plugins.meme_strings as meme_strings
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.Pyroutils import ReplyCheck
+import skynoid.plugins.meme_strings as meme_strings
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.Pyroutils import ReplyCheck
 
-__MODULE__ = 'Memes'
+__MODULE__ = '▲ Memes ▼'
 __HELP__ = """
 This module can help you generate memes and stylish text.
 
@@ -337,8 +337,8 @@ async def glitch(client, message):
         amount = ' '.join(cmd[1:])
     elif len(cmd) == 1:
         amount = '2'
-    profile_photo = 'nana/downloads/pfp.jpg'
-    glitched_gif = 'nana/downloads/glitched_pfp.gif'
+    profile_photo = 'skynoid/downloads/pfp.jpg'
+    glitched_gif = 'skynoid/downloads/glitched_pfp.gif'
     replied = message.reply_to_message
     if not replied:
         await message.delete()
