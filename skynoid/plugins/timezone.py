@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters
 from pytz import timezone
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import time_country
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import time_country
 
 __MODULE__ = 'Time'
 __HELP__ = """
