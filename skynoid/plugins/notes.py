@@ -2,26 +2,26 @@ from pyrogram import errors
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
-from nana import app
-from nana import BotUsername
-from nana import COMMAND_PREFIXES
-from nana import DB_AVAILABLE
-from nana import edit_or_reply
-from nana import Owner
-from nana import setbot
-from nana.utils.msg_types import get_note_type
-from nana.utils.msg_types import Types
-from nana.utils.Pyroutils import ReplyCheck
-from nana.utils.string import build_keyboard
-from nana.utils.string import parse_button
+from skynoid import app
+from skynoid import BotUsername
+from skynoid import COMMAND_PREFIXES
+from skynoid import DB_AVAILABLE
+from skynoid import edit_or_reply
+from skynoid import Owner
+from skynoid import setbot
+from skynoid.utils.msg_types import get_note_type
+from skynoid.utils.msg_types import Types
+from skynoid.utils.Pyroutils import ReplyCheck
+from skynoid.utils.string import build_keyboard
+from skynoid.utils.string import parse_button
 
 if DB_AVAILABLE:
-    from nana.plugins.database import notes_db as db
+    from skynoid.plugins.database import notes_db as db
 
 # TODO: Add buttons support in some types
 # TODO: Add group notes, but whats for? since only you can get notes
 
-__MODULE__ = 'Notes'
+__MODULE__ = '▲ Notes ▼'
 __HELP__ = """
 Save a note, get it or delete it.
 This is available only for yourself only!
