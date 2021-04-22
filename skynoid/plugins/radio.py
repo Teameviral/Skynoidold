@@ -5,10 +5,10 @@ import ffmpeg
 
 from pyrogram import filters
 
-from nana import app, edit_or_reply, AdminSettings, COMMAND_PREFIXES
+from skynoid import app, edit_or_reply, AdminSettings, COMMAND_PREFIXES
 
 VOICE_CHATS = {}
-DEFAULT_DOWNLOAD_DIR = 'nana/downloads/'
+DEFAULT_DOWNLOAD_DIR = 'skynoid/downloads/'
 
 __MODULE__ = 'Radio'
 __HELP__ = """
