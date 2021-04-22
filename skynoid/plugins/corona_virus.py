@@ -2,13 +2,13 @@ import asyncio
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.aiohttp_helper import AioHttp
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.aiohttp_helper import AioHttp
 
-__MODULE__ = 'Covid'
+__MODULE__ = '▲ Covid ▼'
 __HELP__ = """
 Get stats of COVID 19.
 
