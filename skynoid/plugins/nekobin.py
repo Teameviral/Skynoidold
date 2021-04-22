@@ -4,14 +4,14 @@ import os
 from nekobin import NekoBin
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils import capture_err
-from nana.utils.aiohttp_helper import AioHttp
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils import capture_err
+from skynoid.utils.aiohttp_helper import AioHttp
 
-__MODULE__ = 'Nekobin'
+__MODULE__ = '▲ Nekobin ▼'
 __HELP__ = """
 ──「 **Paste to Nekobin** 」──
 -> `neko`
