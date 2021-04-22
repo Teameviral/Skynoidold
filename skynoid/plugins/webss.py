@@ -2,13 +2,13 @@ import os
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import SCREENSHOTLAYER_API
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import SCREENSHOTLAYER_API
 
-__MODULE__ = 'SS Website'
+__MODULE__ = '▲ SS Website ▼'
 __HELP__ = """
 Take a picture of website. You can select one for use this.
 
@@ -61,5 +61,5 @@ async def ss_web(client, message):
         )
     await message.delete()
     await client.send_photo(message.chat.id, photo=r, caption=capt)
-    os.remove('nana/cache/web.png')
+    os.remove('skynoid/cache/web.png')
     await client.send_chat_action(message.chat.id, action='cancel')
