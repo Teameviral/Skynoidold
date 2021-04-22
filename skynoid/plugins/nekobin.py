@@ -34,7 +34,7 @@ async def paste(client, message):
     ):
         var = os.path.splitext(message.reply_to_message.document.file_name)[1]
         print(var)
-        path = await message.reply_to_message.download('nana/')
+        path = await message.reply_to_message.download('skynoid/')
         with open(path) as doc:
             text = doc.read()
         os.remove(path)
