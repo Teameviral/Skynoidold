@@ -130,7 +130,7 @@ async def create_sticker(client, message):
     except IndexError:
         urlretrieve(
             'https://telegra.ph/file/1d3bf9a37547be4b04dcd.jpg',
-            'nana/utils/sticker/default.jpg',
+            'skynoid/utils/sticker/default.jpg',
         )
         photo = 'skynoid/utils/sticker/default.jpg'
 
