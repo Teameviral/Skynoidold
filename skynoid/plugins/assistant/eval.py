@@ -7,10 +7,10 @@ from io import StringIO
 
 from pyrogram import filters
 
-from Skynoid import Owner
-from Skynoid import setbot
-from Skynoid.utils import filt
-from Skynoid.plugins.devs import aexec
+from skynoid import Owner
+from skynoid import setbot
+from skynoid.utils import filt
+from skynoid.plugins.devs import aexec
 
 
 @setbot.on_message(filters.user(Owner) & filt.command(['eval']))
