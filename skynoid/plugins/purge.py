@@ -11,7 +11,7 @@ from skynoid import edit_or_reply
 from skynoid import Owner
 from skynoid.utils.admincheck import admin_check
 
-__MODULE__ = 'Purges'
+__MODULE__ = '▲ Purges ▼'
 __HELP__ = """
 Use this module with your own risk!
 Developers created this module for managing groups, not anything else!
