@@ -472,7 +472,7 @@ async def download_reply_nocall(client, message):
             message.reply_to_message.photo.date,
         )
         await client.download_media(
-            message.reply_to_message.photo, file_name='nana/downloads/' + nama,
+            message.reply_to_message.photo, file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.animation:
         nama = 'giphy_{}-{}.gif'.format(
@@ -481,7 +481,7 @@ async def download_reply_nocall(client, message):
         )
         await client.download_media(
             message.reply_to_message.animation,
-            file_name='nana/downloads/' + nama,
+            file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.video:
         nama = 'video_{}-{}.mp4'.format(
@@ -498,27 +498,27 @@ async def download_reply_nocall(client, message):
         )
         await client.download_media(
             message.reply_to_message.sticker,
-            file_name='nana/downloads/' + nama,
+            file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.audio:
         nama = f'{message.reply_to_message.audio.file_name}'
         await client.download_media(
-            message.reply_to_message.audio, file_name='nana/downloads/' + nama,
+            message.reply_to_message.audio, file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.voice:
         nama = f'audio_{message.reply_to_message.voice.date}.ogg'
         await client.download_media(
-            message.reply_to_message.voice, file_name='nana/downloads/' + nama,
+            message.reply_to_message.voice, file_name='skynoid/downloads/' + nama,
         )
     elif message.reply_to_message.document:
         nama = f'{message.reply_to_message.document.file_name}'
         await client.download_media(
             message.reply_to_message.document,
-            file_name='nana/downloads/' + nama,
+            file_name='skynoid/downloads/' + nama,
         )
     else:
         return False
-    return 'nana/downloads/' + nama
+    return 'skynoid/downloads/' + nama
 
 
 async def download_file_from_tg(client, message):
@@ -527,7 +527,7 @@ async def download_file_from_tg(client, message):
     if message.reply_to_message.photo:
         await client.download_media(
             message.reply_to_message.photo,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -535,7 +535,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.animation:
         await client.download_media(
             message.reply_to_message.animation,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -543,7 +543,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.video:
         await client.download_media(
             message.reply_to_message.video,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -551,7 +551,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.sticker:
         await client.download_media(
             message.reply_to_message.sticker,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -559,7 +559,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.audio:
         await client.download_media(
             message.reply_to_message.audio,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -567,7 +567,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.voice:
         await client.download_media(
             message.reply_to_message.voice,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -575,7 +575,7 @@ async def download_file_from_tg(client, message):
     elif message.reply_to_message.document:
         await client.download_media(
             message.reply_to_message.document,
-            file_name='nana/downloads/' + name,
+            file_name='skynoid/downloads/' + name,
             progress=lambda d, t: client.loop.create_task(
                 progressdl(d, t, message, c_time, 'Downloading...'),
             ),
@@ -587,7 +587,7 @@ async def download_file_from_tg(client, message):
     times = await time_parser(c_time, end)
     text = '**⬇ Downloaded!**\n'
     text += f'🗂 File name: `{name}`\n'
-    text += '🏷 Saved to: `nana/downloads/`\n'
+    text += '🏷 Saved to: `skynoid/downloads/`\n'
     text += f'⏲ Downloaded in: {times}'
     await edit_or_reply(message, text=text)
 
