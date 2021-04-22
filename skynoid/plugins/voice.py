@@ -75,18 +75,18 @@ async def voice(client, message):
     await client.send_chat_action(message.chat.id, 'record_audio')
     # noinspection PyUnboundLocalVariable
     tts = gTTS(v_text, lang=lang)
-    tts.save('nana/cache/voice.ogg')
+    tts.save('skynoid/cache/voice.ogg')
     await message.delete()
     if message.reply_to_message:
         await client.send_voice(
             message.chat.id,
-            voice='nana/cache/voice.ogg',
+            voice='skynoid/cache/voice.ogg',
             reply_to_message_id=message.reply_to_message.message_id,
         )
     else:
-        await client.send_voice(message.chat.id, voice='nana/cache/voice.ogg')
+        await client.send_voice(message.chat.id, voice='skynoid/cache/voice.ogg')
     await client.send_chat_action(message.chat.id, action='cancel')
-    os.remove('nana/cache/voice.ogg')
+    os.remove('skynoid/cache/voice.ogg')
 
 
 @app.on_message(
