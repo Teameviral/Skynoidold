@@ -4,22 +4,22 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 from pykeyboard import InlineKeyboard
 
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import DB_AVAILABLE
-from nana import edit_or_reply
-from nana import Owner
-from nana import OwnerName
-from nana import setbot
-from nana.utils.msg_types import get_message_type
-from nana.utils.msg_types import Types
-from nana.utils.parser import escape_markdown
-from nana.utils.parser import mention_markdown
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import DB_AVAILABLE
+from skynoid import edit_or_reply
+from skynoid import Owner
+from skynoid import OwnerName
+from skynoid import setbot
+from skynoid.utils.msg_types import get_message_type
+from skynoid.utils.msg_types import Types
+from skynoid.utils.parser import escape_markdown
+from skynoid.utils.parser import mention_markdown
 
 if DB_AVAILABLE:
-    from nana.plugins.database.afk_db import set_afk, get_afk
+    from skynoid.plugins.database.afk_db import set_afk, get_afk
 
-__MODULE__ = 'AFK'
+__MODULE__ = '▲ AFK ▼'
 __HELP__ = """
 Module for enabling auto replies when you are AFK.
 When enabled,
