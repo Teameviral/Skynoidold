@@ -2,11 +2,11 @@ import asyncio
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.aiohttp_helper import AioHttp
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.aiohttp_helper import AioHttp
 
 
 __HELP__ = """
@@ -14,7 +14,7 @@ __HELP__ = """
 -> `dic`
 Search dictionary for provided words
 """
-__MODULE__ = 'Dictionary'
+__MODULE__ = '▲ Dictionary ▼'
 
 
 @app.on_message(
