@@ -4,8 +4,8 @@ from html import escape
 
 from pyrogram import filters
 
-from nana import app, COMMAND_PREFIXES, AdminSettings, edit_or_reply, Owner
-from nana.plugins.database.lang_db import prev_locale
+from skynoid import app, COMMAND_PREFIXES, AdminSettings, edit_or_reply, Owner
+from skynoid.plugins.database.lang_db import prev_locale
 
 
 __MODULE__ = 'Weather'
