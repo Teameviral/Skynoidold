@@ -3,13 +3,13 @@ import os
 import requests
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
 
 
-__MODULE__ = 'OCR'
+__MODULE__ = '▲ OCR ▼'
 __HELP__ = """
 Read Texts from photos and Stickers
 
@@ -73,7 +73,7 @@ async def ocr(client, message):
         reply_p = replied.sticker
     downloaded_file_name = await client.download_media(
         reply_p,
-        'nana/cache/file.png',
+        'skynoid/cache/file.png',
     )
     test_file = await ocr_space_file(
         filename=downloaded_file_name,
