@@ -286,7 +286,7 @@ async def gdrive_stuff(client, message):
                     nama = f'photo_{message.reply_to_message.photo.date}.png'
                 await client.download_media(
                     message.reply_to_message.photo,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
