@@ -2,13 +2,13 @@ from asyncio import sleep
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.expand import expand_url
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.expand import expand_url
 
-__MODULE__ = 'Link Expander'
+__MODULE__ = '▲ Link Expander ▼'
 __HELP__ = """
 ──「 **Expand URL** 」──
 -> `expand (link)`
