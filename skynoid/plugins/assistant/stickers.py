@@ -11,7 +11,7 @@ from .settings import get_text_settings
 from skynoid import AdminSettings
 from skynoid import app
 from skynoid import DB_AVAILABLE
-from skynoid import NANA_IMG
+from skynoid import SKYNOID_IMG
 from skynoid import Owner
 from skynoid import setbot
 from skynoid.utils import filt
