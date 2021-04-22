@@ -8,16 +8,16 @@ from git.exc import InvalidGitRepositoryError
 from git.exc import NoSuchPathError
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import OFFICIAL_BRANCH
-from nana import REPOSITORY
-from nana.__main__ import except_hook
-from nana.__main__ import restart_all
-from nana.plugins.assistant.updater import update_changelog
-from nana.utils.capture_errors import capture_err
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import OFFICIAL_BRANCH
+from skynoid import REPOSITORY
+from skynoid.__main__ import except_hook
+from skynoid.__main__ import restart_all
+from skynoid.plugins.assistant.updater import update_changelog
+from skynoid.utils.capture_errors import capture_err
 
 __MODULE__ = 'Updater'
 __HELP__ = """
@@ -49,20 +49,20 @@ async def gen_chlog(repo, diff):
 async def initial_git(repo):
     isexist = os.path.exists('nana-old')
     if isexist:
-        shutil.rmtree('nana-old')
-    os.mkdir('nana-old')
-    os.rename('nana', 'nana-old/nana')
-    os.rename('.gitignore', 'nana-old/.gitignore')
-    os.rename('LICENSE', 'nana-old/LICENSE')
-    os.rename('README.md', 'nana-old/README.md')
-    os.rename('requirements.txt', 'nana-old/requirements.txt')
-    os.rename('Procfile', 'nana-old/Procfile')
-    os.rename('runtime.txt', 'nana-old/runtime.txt')
+        shutil.rmtree('skynoid-old')
+    os.mkdir('skynoid-old')
+    os.rename('skynoid', 'skynoid-old/skynoid')
+    os.rename('.gitignore', 'skynoid-old/.gitignore')
+    os.rename('LICENSE', 'skynoid-old/LICENSE')
+    os.rename('README.md', 'skynoid-old/README.md')
+    os.rename('requirements.txt', 'skynoid-old/requirements.txt')
+    os.rename('Procfile', 'skynoid-old/Procfile')
+    os.rename('runtime.txt', 'skynoid-old/runtime.txt')
     update = repo.create_remote('master', REPOSITORY)
     update.pull('master')
-    os.rename('nana-old/nana/config.py', 'nana/config.py')
-    shutil.rmtree('nana/session/')
-    os.rename('nana-old/nana/session/', 'nana/session/')
+    os.rename('skynoid-old/skynoid/config.py', 'skynoid/config.py')
+    shutil.rmtree('skynoid/session/')
+    os.rename('skynoid-old/skynoid/session/', 'skynoid/session/')
 
 
 @app.on_message(
@@ -181,15 +181,15 @@ async def updater(client, message):
                 message,
                 text='**Changelog is too big, view the file to see it.**',
             )
-            with open('nana/cache/output.txt', 'w+') as file:
+            with open('skynoid/cache/output.txt', 'w+') as file:
                 file.write(changelog_str)
             await client.send_document(
                 message.chat.id,
-                'nana/cache/output.txt',
+                'skynoid/cache/output.txt',
                 reply_to_message_id=message.message_id,
                 caption='**Changelog file**',
             )
-            os.remove('nana/cache/output.txt')
+            os.remove('skynoid/cache/output.txt')
         else:
             await edit_or_reply(message, text=changelog_str)
         return
@@ -202,9 +202,9 @@ async def updater(client, message):
             )
         except GitCommandError:
             repo.git.reset('--hard')
-            repo.git.clean('-fd', 'nana/modules/')
-            repo.git.clean('-fd', 'nana/assistant/')
-            repo.git.clean('-fd', 'nana/utils/')
+            repo.git.clean('-fd', 'skynoid/modules/')
+            repo.git.clean('-fd', 'skynoid/assistant/')
+            repo.git.clean('-fd', 'skynoid/utils/')
             await edit_or_reply(
                 message, text='Successfully Updated!\nBot is restarting...',
             )
