@@ -11,7 +11,7 @@ from skynoid import app
 from skynoid import ASSISTANT_VERSION
 from skynoid import BotUsername
 from skynoid import DB_AVAILABLE
-from skynoid import NANA_IMG
+from skynoid import SKYNOID_IMG
 from skynoid import OwnerName
 from skynoid import setbot
 from skynoid import USERBOT_VERSION
@@ -75,9 +75,9 @@ async def start(_, message):
         buttons.add(
             InlineKeyboardButton(tld('help_btn'), callback_data='help_back'),
         )
-        if NANA_IMG:
+        if SKYNOID_IMG:
             await message.reply_photo(
-                NANA_IMG,
+                SKYNOID_IMG,
                 caption=tld('start_message').format(
                     OwnerName,
                     python_version(),
