@@ -2,13 +2,13 @@ from asyncio import sleep
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.sticker import create_sticker
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.sticker import create_sticker
 
-__MODULE__ = 'Quotly'
+__MODULE__ = '▲ Quotly ▼'
 __HELP__ = """
 ──「 **Make Quote From Message** 」──
 -> `q`
