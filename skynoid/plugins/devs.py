@@ -7,11 +7,11 @@ from io import StringIO
 
 from pyrogram import filters
 
-from nana import COMMAND_PREFIXES, app, edit_or_reply, AdminSettings
-from nana.utils.parser import mention_markdown
-from nana.utils.aiohttp_helper import AioHttp
+from skynoid import COMMAND_PREFIXES, app, edit_or_reply, AdminSettings
+from skynoid.utils.parser import mention_markdown
+from skynoid.utils.aiohttp_helper import AioHttp
 
-__MODULE__ = 'Devs'
+__MODULE__ = '▲ Devs ▼'
 __HELP__ = """
 This module is for those who know programming or
 getting some technical information about your (user)bot or user account.
@@ -60,7 +60,7 @@ async def sd_reveal(client, message):
         await message.delete()
         return
     await message.delete()
-    a = 'nana/file.png'
+    a = 'skynoid/file.png'
     await client.download_media(message.reply_to_message.photo, file_name=a)
     if tags:
         await client.send_photo('me', a)
@@ -214,16 +214,16 @@ async def terminal(client, message):
         output = None
     if output:
         if len(output) > 4096:
-            with open('nana/cache/output.txt', 'w+') as file:
+            with open('skynoid/cache/output.txt', 'w+') as file:
                 file.write(output)
                 file.close()
             await client.send_document(
                 message.chat.id,
-                'nana/cache/output.txt',
+                'skynoid/cache/output.txt',
                 reply_to_message_id=message.message_id,
                 caption='`Output`',
             )
-            os.remove('nana/cache/output.txt')
+            os.remove('skynoid/cache/output.txt')
             return
         await edit_or_reply(
             message,
