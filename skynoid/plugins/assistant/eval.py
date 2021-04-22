@@ -116,7 +116,7 @@ async def terminal(client, message):
                 file.close()
             await client.send_document(
                 message.chat.id,
-                'nana/cache/output.txt',
+                'skynoid/cache/output.txt',
                 reply_to_message_id=message.message_id,
                 caption='`Output file`',
             )
