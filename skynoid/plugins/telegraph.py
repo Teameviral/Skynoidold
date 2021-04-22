@@ -48,7 +48,7 @@ async def telegraph(client, message):
         await edit_or_reply(message, text='not supported!')
         return
     download_location = await client.download_media(
-        message=message.reply_to_message, file_name='root/nana/',
+        message=message.reply_to_message, file_name='root/skynoid/',
     )
     try:
         response = upload_file(download_location)
