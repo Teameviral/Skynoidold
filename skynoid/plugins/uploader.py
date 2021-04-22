@@ -80,7 +80,7 @@ async def StickerUploader(client, message):
                 reply_to_message_id=message.reply_to_message.message_id,
             )
         else:
-            await client.send_sticker(message.chat.id, 'nana/cache/stiker.png')
+            await client.send_sticker(message.chat.id, 'skynoid/cache/stiker.png')
         os.remove('skynoid/cache/stiker.png')
     else:
         if message.reply_to_message:
