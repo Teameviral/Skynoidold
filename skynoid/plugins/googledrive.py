@@ -7,19 +7,19 @@ from pydrive.drive import GoogleDrive
 from pyrogram import filters
 
 from .downloads import progressdl
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import ENV
-from nana import gauth
-from nana import GDRIVE_CREDENTIALS
-from nana import setbot
-from nana.languages.strings import tld
-from nana.plugins.downloads import download_url
-from nana.utils.parser import cleanhtml
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import ENV
+from skynoid import gauth
+from skynoid import GDRIVE_CREDENTIALS
+from skynoid import setbot
+from skynoid.languages.strings import tld
+from skynoid.plugins.downloads import download_url
+from skynoid.utils.parser import cleanhtml
 
-__MODULE__ = 'GDrive'
+__MODULE__ = '▲ GDrive ▼'
 __HELP__ = """
 For logging just use /gdrive.
 
@@ -54,7 +54,7 @@ async def get_drivedir(drive):
             return drivefolders['id']
     mkdir = drive.CreateFile(
         {
-            'title': 'Nana Drive',
+            'title': 'Skynoid Drive',
             'mimeType': 'application/vnd.google-apps.folder',
         },
     )
@@ -180,24 +180,24 @@ async def gdrive_stuff(client, message):
         download = drive.CreateFile({'id': driveid})
         download.GetContentFile(filename)
         try:
-            os.rename(filename, 'nana/downloads/' + filename.replace(' ', '_'))
+            os.rename(filename, 'skynoid/downloads/' + filename.replace(' ', '_'))
         except FileExistsError:
             os.rename(
-                filename, 'nana/downloads/' + filename.replace(
+                filename, 'skynoid/downloads/' + filename.replace(
                     ' ', '_',
                 ) + '.2',
             )
         await edit_or_reply(
             message,
             text='Downloaded!\nFile saved to `{}`'.format(
-                'nana/downloads/' + filename.replace(' ', '_'),
+                'skynoid/downloads/' + filename.replace(' ', '_'),
             ),
         )
     elif len(
         message.text.split(),
     ) == 3 and message.text.split()[1] == 'upload':
         filerealname = message.text.split()[2].split(None, 1)[0]
-        filename = 'nana/downloads/{}'.format(filerealname.replace(' ', '_'))
+        filename = 'skynoid/downloads/{}'.format(filerealname.replace(' ', '_'))
         checkfile = os.path.isfile(filename)
         if not checkfile:
             await edit_or_reply(
@@ -337,7 +337,7 @@ async def gdrive_stuff(client, message):
                     )
                 await client.download_media(
                     message.reply_to_message.sticker,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
@@ -353,7 +353,7 @@ async def gdrive_stuff(client, message):
                     )
                 await client.download_media(
                     message.reply_to_message.audio,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
@@ -369,7 +369,7 @@ async def gdrive_stuff(client, message):
                     )
                 await client.download_media(
                     message.reply_to_message.voice,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
@@ -378,7 +378,7 @@ async def gdrive_stuff(client, message):
                 nama = f'{message.reply_to_message.document.file_name}'
                 await client.download_media(
                     message.reply_to_message.document,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
@@ -392,7 +392,7 @@ async def gdrive_stuff(client, message):
                     'title': nama,
                 },
             )
-            upload.SetContentFile('nana/downloads/' + nama)
+            upload.SetContentFile('skynoid/downloads/' + nama)
             upload.Upload()
             upload.InsertPermission(
                 {'type': 'anyone', 'value': 'anyone', 'role': 'reader'},
@@ -403,7 +403,7 @@ async def gdrive_stuff(client, message):
                     nama, upload['alternateLink'],
                 ),
             )
-            os.remove('nana/downloads/' + nama)
+            os.remove('skynoid/downloads/' + nama)
         else:
             await edit_or_reply(
                 message,
@@ -436,7 +436,7 @@ async def gdrive_stuff(client, message):
                 'title': nama,
             },
         )
-        upload.SetContentFile('nana/downloads/' + nama)
+        upload.SetContentFile('skynoid/downloads/' + nama)
         upload.Upload()
         upload.InsertPermission(
             {'type': 'anyone', 'value': 'anyone', 'role': 'reader'},
