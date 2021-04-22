@@ -50,7 +50,7 @@ async def get_drivedir(drive):
         {'q': "'root' in parents and trashed=false"},
     ).GetList()
     for drivefolders in file_list:
-        if drivefolders['title'] == 'Nana Drive':
+        if drivefolders['title'] == 'Skynoid Drive':
             return drivefolders['id']
     mkdir = drive.CreateFile(
         {
