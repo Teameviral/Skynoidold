@@ -5,14 +5,14 @@ from asyncio import sleep
 from pyrogram import filters
 from pyrogram.raw import functions
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import DB_AVAILABLE
-from nana import edit_or_reply
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import DB_AVAILABLE
+from skynoid import edit_or_reply
 
 if DB_AVAILABLE:
-    from nana.plugins.database.cloner_db import (
+    from skynoid.plugins.database.cloner_db import (
         backup_indentity,
         restore_identity,
     )
@@ -59,7 +59,7 @@ Forward a message into Saved Messages
 Creates message link to a message
 """
 
-profile_photo = 'nana/downloads/pfp.jpg'
+profile_photo = 'skynoid/downloads/pfp.jpg'
 
 
 @app.on_message(
@@ -150,7 +150,7 @@ async def clone(client, message):
         )
     q = await app.get_profile_photos(target)
     dl = await client.download_media(q[0], file_name='nana/downloads/pp.png')
-    await app.set_profile_photo(photo='nana/downloads/pp.png')
+    await app.set_profile_photo(photo='skynoid/downloads/pp.png')
     t = await app.get_users(target)
     t = await client.send(
         functions.users.GetFullUser(id=await client.resolve_peer(t['id'])),
