@@ -128,7 +128,7 @@ async def start_bot():
         imported_module = importlib.import_module(
             'skynoid.plugins.assistant.' + setting,
         )
-    # Nana userbot
+    # Skynoid userbot
     await app.start()
     for modul in ALL_MODULES:
         imported_module = importlib.import_module('skynoid.plugins.' + modul)
