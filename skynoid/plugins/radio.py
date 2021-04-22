@@ -99,7 +99,7 @@ async def join_voice_chat(client, message):
     except RuntimeError:
         await edit_or_reply(
             message,
-            text='@Evirala please update the strings',
+            text='@Eviral please update the strings',
         )
         return
     VOICE_CHATS[chat_id] = group_call
