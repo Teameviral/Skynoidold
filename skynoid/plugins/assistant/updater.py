@@ -74,7 +74,7 @@ async def update_checker():
     changelog = await gen_chlog(repo, f'HEAD..upstream/{brname}')
 
     if not changelog:
-        log.info(f'Nana is up-to-date with branch {brname}')
+        log.info(f'Skynoid is up-to-date with branch {brname}')
         return
 
     log.warning(f'New UPDATE available for [{brname}]!')
