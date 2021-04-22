@@ -16,7 +16,7 @@ import traceback
 
 
 if DB_AVAILABLE:
-    from nana.plugins.database import notes_db
+    from skynoid.plugins.database import notes_db
 
 
 async def note_func(string, client, query, answers):
