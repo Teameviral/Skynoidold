@@ -150,7 +150,7 @@ async def kang_stickers(client, message):
             else:
                 maxsize = (512, 512)
                 im.thumbnail(maxsize)
-            im.save('nana/cache/sticker.png', 'PNG')
+            im.save('skynoid/cache/sticker.png', 'PNG')
         mime_type = (
             message.reply_to_message.sticker
             or message.reply_to_message.photo
@@ -182,10 +182,10 @@ async def kang_stickers(client, message):
             message.reply_to_message.sticker
             and mime_type == 'application/x-tgsticker'
         ):
-            await client.send_document('@Stickers', 'nana/cache/sticker.tgs')
+            await client.send_document('@Stickers', 'skynoid/cache/sticker.tgs')
             os.remove('skynoid/cache/sticker.tgs')
         else:
-            await client.send_document('@Stickers', 'nana/cache/sticker.png')
+            await client.send_document('@Stickers', 'skynoid/cache/sticker.png')
             os.remove('skynoid/cache/sticker.png')
         if len(message.text.split(None, 1)) > 1:
             ic = message.text.split(None, 1)[1]
