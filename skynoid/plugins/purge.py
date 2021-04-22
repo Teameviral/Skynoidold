@@ -4,12 +4,12 @@ from datetime import datetime
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import Owner
-from nana.utils.admincheck import admin_check
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import Owner
+from skynoid.utils.admincheck import admin_check
 
 __MODULE__ = 'Purges'
 __HELP__ = """
