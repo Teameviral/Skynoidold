@@ -2,8 +2,8 @@ from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import UnicodeText
 
-from nana import BASE
-from nana import SESSION
+from skynoid import BASE
+from skynoid import SESSION
 
 
 class MyChats(BASE):
