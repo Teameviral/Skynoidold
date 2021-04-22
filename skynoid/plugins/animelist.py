@@ -3,21 +3,21 @@ import re
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import BotUsername
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import Owner
-from nana import setbot
-from nana.plugins.database import anime_db as sql
-from nana.utils.Pyroutils import ReplyCheck
-from nana.utils.sauce import airing_sauce
-from nana.utils.sauce import character_sauce
-from nana.utils.sauce import manga_sauce
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import BotUsername
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import Owner
+from skynoid import setbot
+from skynoid.plugins.database import anime_db as sql
+from skynoid.utils.Pyroutils import ReplyCheck
+from skynoid.utils.sauce import airing_sauce
+from skynoid.utils.sauce import character_sauce
+from skynoid.utils.sauce import manga_sauce
 
 
-__MODULE__ = 'Anilist'
+__MODULE__ = '▲ Animelist ▼'
 
 __HELP__ = """
 Module to get information about anime,
