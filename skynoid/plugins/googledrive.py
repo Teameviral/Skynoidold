@@ -448,7 +448,7 @@ async def gdrive_stuff(client, message):
                 upload['alternateLink'],
             ),
         )
-        os.remove('nana/downloads/' + nama)
+        os.remove('skynoid/downloads/' + nama)
     else:
         await edit_or_reply(
             message,
