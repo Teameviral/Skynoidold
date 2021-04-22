@@ -10,14 +10,14 @@ from pyrogram import filters
 from reportlab.graphics import renderPM
 from svglib.svglib import svg2rlg
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana.utils.aiohttp_helper import AioHttp
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid.utils.aiohttp_helper import AioHttp
+from skynoid.utils.Pyroutils import ReplyCheck
 
-__MODULE__ = 'Github'
+__MODULE__ = '▲ Github ▼'
 __HELP__ = """
 By using this module, you can get information about a GitHub user.
 
