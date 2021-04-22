@@ -3,11 +3,11 @@ import sre_constants
 
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import edit_or_reply
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import edit_or_reply
 
-__MODULE__ = 'Sed'
+__MODULE__ = '▲ Sed ▼'
 __HELP__ = """
 Need help?
 Learn regex here: regexone.com
