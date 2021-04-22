@@ -4,7 +4,7 @@ import time
 
 from PIL import Image
 
-from nana import (
+from skynoid import (
     app,
     setbot,
     COMMAND_PREFIXES,
@@ -14,7 +14,7 @@ from nana import (
 )
 
 if DB_AVAILABLE:
-    from nana.plugins.assistant.database.stickers_db import (
+    from skynoid.plugins.assistant.database.stickers_db import (
         get_sticker_set,
         get_stanim_set,
     )
@@ -96,17 +96,17 @@ async def kang_stickers(client, message):
                     return
                 await client.download_media(
                     message.reply_to_message.sticker,
-                    file_name='nana/cache/sticker.tgs',
+                    file_name='skynoid/cache/sticker.tgs',
                 )
             else:
                 await client.download_media(
                     message.reply_to_message.sticker,
-                    file_name='nana/cache/sticker.png',
+                    file_name='skynoid/cache/sticker.png',
                 )
         elif message.reply_to_message and message.reply_to_message.photo:
             await client.download_media(
                 message.reply_to_message.photo,
-                file_name='nana/cache/sticker.png',
+                file_name='skynoid/cache/sticker.png',
             )
         elif (
             message.reply_to_message
@@ -116,7 +116,7 @@ async def kang_stickers(client, message):
         ):
             await client.download_media(
                 message.reply_to_message.document,
-                file_name='nana/cache/sticker.png',
+                file_name='skynoid/cache/sticker.png',
             )
         else:
             await edit_or_reply(
@@ -131,7 +131,7 @@ async def kang_stickers(client, message):
                 message.reply_to_message.sticker
                 and message.reply_to_message.sticker.mime_type
         ) != 'application/x' '-tgsticker':
-            im = Image.open('nana/cache/sticker.png')
+            im = Image.open('skynoid/cache/sticker.png')
             if (im.width and im.height) < 512:
                 size1 = im.width
                 size2 = im.height
@@ -176,17 +176,17 @@ async def kang_stickers(client, message):
                 message,
                 text='Your sticker pack was full!',
             )
-            os.remove('nana/cache/sticker.png')
+            os.remove('skynoid/cache/sticker.png')
             return
         if (
             message.reply_to_message.sticker
             and mime_type == 'application/x-tgsticker'
         ):
             await client.send_document('@Stickers', 'nana/cache/sticker.tgs')
-            os.remove('nana/cache/sticker.tgs')
+            os.remove('skynoid/cache/sticker.tgs')
         else:
             await client.send_document('@Stickers', 'nana/cache/sticker.png')
-            os.remove('nana/cache/sticker.png')
+            os.remove('skynoid/cache/sticker.png')
         if len(message.text.split(None, 1)) > 1:
             ic = message.text.split(None, 1)[1]
         elif message.reply_to_message.sticker:
