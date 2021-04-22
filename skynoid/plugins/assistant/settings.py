@@ -75,8 +75,8 @@ async def get_button_settings():
 async def settings(_, message):
     text = await get_text_settings()
     button = await get_button_settings()
-    if NANA_IMG:
-        await message.reply_photo(NANA_IMG, caption=text, reply_markup=button)
+    if SKYNOID_IMG:
+        await message.reply_photo(SKYNOID_IMG, caption=text, reply_markup=button)
     else:
         await message.reply(text, reply_markup=button)
 
