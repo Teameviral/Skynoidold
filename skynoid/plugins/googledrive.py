@@ -108,7 +108,7 @@ async def credentials(_, message):
     filters.user(AdminSettings) & filters.command('gdrive', COMMAND_PREFIXES),
 )
 async def gdrive_stuff(client, message):
-    gauth.LoadCredentialsFile('nana/session/drive')
+    gauth.LoadCredentialsFile('skynoid/session/drive')
     if gauth.credentials is None:
         if ENV and GDRIVE_CREDENTIALS:
             with open('client_secrets.json', 'w') as file:
