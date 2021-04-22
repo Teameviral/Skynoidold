@@ -10,7 +10,7 @@ from skynoid import app, edit_or_reply, AdminSettings, COMMAND_PREFIXES
 VOICE_CHATS = {}
 DEFAULT_DOWNLOAD_DIR = 'skynoid/downloads/'
 
-__MODULE__ = 'Radio'
+__MODULE__ = '▲ Radio ▼'
 __HELP__ = """
 ──「 **Radio (BETA)** 」──
 -> `play`
@@ -73,7 +73,7 @@ async def play_track(client, message):
 async def stop_playing(_, message):
     group_call = VOICE_CHATS[message.chat.id]
     group_call.stop_playout()
-    os.remove('nana/downloads/input.raw')
+    os.remove('skynoid/downloads/input.raw')
     await edit_or_reply(
         message,
         text='Stopped Playing...',
@@ -99,7 +99,7 @@ async def join_voice_chat(client, message):
     except RuntimeError:
         await edit_or_reply(
             message,
-            text='@dank_as_fuck please update the strings',
+            text='@Evirala please update the strings',
         )
         return
     VOICE_CHATS[chat_id] = group_call
