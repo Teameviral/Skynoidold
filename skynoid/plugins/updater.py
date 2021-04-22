@@ -166,7 +166,7 @@ async def updater(client, message):
 
     if not changelog:
         await edit_or_reply(
-            message, text=f'Nana is up-to-date with branch **{brname}**\n',
+            message, text=f'Skynoid is up-to-date with branch **{brname}**\n',
         )
         return
 
