@@ -4,10 +4,10 @@ import shutil
 import requests
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
 
 __MODULE__ = 'Uploader'
 __HELP__ = """
@@ -36,17 +36,17 @@ async def PictureUploader(client, message):
     await message.delete()
     if 'http' in photo:
         r = requests.get(photo, stream=True)
-        with open('nana/cache/pic.png', 'wb') as stk:
+        with open('skynoid/cache/pic.png', 'wb') as stk:
             shutil.copyfileobj(r.raw, stk)
         if message.reply_to_message:
             await client.send_photo(
                 message.chat.id,
-                'nana/cache/pic.png',
+                'skynoid/cache/pic.png',
                 reply_to_message_id=message.reply_to_message.message_id,
             )
         else:
-            await client.send_photo(message.chat.id, 'nana/cache/pic.png')
-        os.remove('nana/cache/pic.png')
+            await client.send_photo(message.chat.id, 'skynoid/cache/pic.png')
+        os.remove('skynoid/cache/pic.png')
     else:
         if message.reply_to_message:
             await client.send_photo(
@@ -71,17 +71,17 @@ async def StickerUploader(client, message):
     await message.delete()
     if 'http' in photo:
         r = requests.get(photo, stream=True)
-        with open('nana/cache/stiker.png', 'wb') as stk:
+        with open('skynoid/cache/stiker.png', 'wb') as stk:
             shutil.copyfileobj(r.raw, stk)
         if message.reply_to_message:
             await client.send_sticker(
                 message.chat.id,
-                'nana/cache/stiker.png',
+                'skynoid/cache/stiker.png',
                 reply_to_message_id=message.reply_to_message.message_id,
             )
         else:
             await client.send_sticker(message.chat.id, 'nana/cache/stiker.png')
-        os.remove('nana/cache/stiker.png')
+        os.remove('skynoid/cache/stiker.png')
     else:
         if message.reply_to_message:
             await client.send_sticker(
