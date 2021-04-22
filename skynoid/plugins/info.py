@@ -10,7 +10,7 @@ from skynoid import app
 from skynoid import COMMAND_PREFIXES
 from skynoid import edit_or_reply
 
-__MODULE__ = 'Whois'
+__MODULE__ = '▲ Whois ▼'
 __HELP__ = """
 ──「 **Whois** 」──
 -> `info` `@username`, `user_id` or reply
