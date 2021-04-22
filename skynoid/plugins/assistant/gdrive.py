@@ -53,7 +53,7 @@ async def gdrive_helper(_, message):
     elif len(
         message.text.split(),
     ) == 2 and message.text.split()[1] == 'logout':
-        os.remove('nana/session/drive')
+        os.remove('skynoid/session/drive')
         await message.reply(
             'You have logged out of your account!',
         )
