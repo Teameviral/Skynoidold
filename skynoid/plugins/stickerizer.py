@@ -3,8 +3,8 @@ import random
 
 from pyrogram import filters
 
-from nana import app, COMMAND_PREFIXES, AdminSettings, edit_or_reply
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import app, COMMAND_PREFIXES, AdminSettings, edit_or_reply
+from skynoid.utils.Pyroutils import ReplyCheck
 
 
 __MODULE__ = 'Stickerizer'
