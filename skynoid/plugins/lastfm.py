@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid.utils.Pyroutils import ReplyCheck
 
 __HELP__ = """
 ──「 **LastFM** 」──
@@ -12,7 +12,7 @@ Share what you're listening to.
 
 Note: you need to set you username in @lastfmrobot.
 """
-__MODULE__ = 'Last.FM'
+__MODULE__ = '▲ Last.FM ▼'
 
 
 @app.on_message(
