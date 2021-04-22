@@ -1,7 +1,5 @@
 # This module created by @legenhand 10/3/2020
-# Ported to Keep.sh from Transfer.sh by @pokurt
-# any error / bugs please report to https://t.me/nanabotsupport
-# this module only support to Nana-Bot userbot
+
 import datetime
 import os
 
@@ -11,13 +9,13 @@ from pyrogram import filters
 from .downloads import download_file_from_tg
 from .downloads import humanbytes
 from .downloads import name_file
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import log
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import log
 
-__MODULE__ = 'Keep.sh'
+__MODULE__ = '▲ Keep.sh ▼'
 __HELP__ = """
 Mirror any telegram file to keep.sh.
 
