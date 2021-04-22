@@ -4,8 +4,8 @@ from sqlalchemy import Column
 from sqlalchemy import Numeric
 from sqlalchemy import UnicodeText
 
-from nana import BASE
-from nana import SESSION
+from skynoid import BASE
+from skynoid import SESSION
 
 
 class Favourites(BASE):
