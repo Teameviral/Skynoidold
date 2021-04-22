@@ -128,7 +128,7 @@ async def get_myself(client, message):
     if me.photo:
         getpp = await client.download_media(
             me.photo.big_file_id,
-            file_name='nana/downloads/pfp.png',
+            file_name='skynoid/downloads/pfp.png',
         )
         await message.reply_photo(
             photo=getpp,
