@@ -26,12 +26,12 @@ COLORS = [
 
 urlretrieve(
     'https://github.com/pokurt/Fonts/raw/master/NotoSansDisplay-Bold.ttf',
-    'nana/utils/sticker/NotoSansDisplay-Bold.ttf',
+    'skynoid/utils/sticker/NotoSansDisplay-Bold.ttf',
 )
 
 urlretrieve(
     'https://github.com/pokurt/Fonts/raw/master/OpenSans-Regular.ttf',
-    'nana/utils/sticker/OpenSans-Regular.ttf',
+    'skynoid/utils/sticker/OpenSans-Regular.ttf',
 )
 
 
@@ -53,11 +53,11 @@ async def create_sticker(client, message):
         wrap_size = 200
 
     font = ImageFont.truetype(
-        'nana/utils/sticker/OpenSans-Regular.ttf',
+        'skynoid/utils/sticker/OpenSans-Regular.ttf',
         body_font_size,
     )
     font_who = ImageFont.truetype(
-        'nana/utils/sticker/NotoSansDisplay-Bold.ttf',
+        'skynoid/utils/sticker/NotoSansDisplay-Bold.ttf',
         24,
     )
 
@@ -132,7 +132,7 @@ async def create_sticker(client, message):
             'https://telegra.ph/file/1d3bf9a37547be4b04dcd.jpg',
             'nana/utils/sticker/default.jpg',
         )
-        photo = 'nana/utils/sticker/default.jpg'
+        photo = 'skynoid/utils/sticker/default.jpg'
 
     im = Image.open(photo).convert('RGBA')
     im.thumbnail((60, 60))
