@@ -1,25 +1,17 @@
-# Copyright (C) 2020 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
-#
-# This file is part of < https://github.com/UsergeTeam/Userge > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/uaudith/Userge/blob/master/LICENSE >
-#
-# All rights reserved.
-# Ported to Nana by @pokurt
 import os
 from asyncio import sleep
 
 from pyrogram import filters
 from removebg import RemoveBg
 
-from nana import AdminSettings
-from nana import app
-from nana import COMMAND_PREFIXES
-from nana import edit_or_reply
-from nana import REMOVE_BG_API
-from nana.utils.Pyroutils import ReplyCheck
+from skynoid import AdminSettings
+from skynoid import app
+from skynoid import COMMAND_PREFIXES
+from skynoid import edit_or_reply
+from skynoid import REMOVE_BG_API
+from skynoid.utils.Pyroutils import ReplyCheck
 
-DOWN_PATH = 'nana/'
+DOWN_PATH = 'skynoid/downloads'
 
 IMG_PATH = DOWN_PATH + 'image.jpg'
 
