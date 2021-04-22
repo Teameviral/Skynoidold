@@ -303,7 +303,7 @@ async def gdrive_stuff(client, message):
                     )
                 await client.download_media(
                     message.reply_to_message.animation,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
@@ -320,7 +320,7 @@ async def gdrive_stuff(client, message):
                     )
                 await client.download_media(
                     message.reply_to_message.video,
-                    file_name='nana/downloads/' + nama,
+                    file_name='skynoid/downloads/' + nama,
                     progress=lambda d, t: client.loop.create_task(
                         progressdl(d, t, message, c_time, 'Downloading...'),
                     ),
