@@ -18,6 +18,10 @@ A Modular Pyrogram Based Telegram Userbot with an Assistant
 
 Heroku is suspending many userbots. Try to use different hosting server.
 
+## Session String
+To get your `SESSION`:
+* [![Run on Repl.it](https://replit.com/badge/github/TeamEviral/skynoid)](https://replit.com/@TeamEviral/skynoidsession)
+
 # Credit
 Main Credit Goes to Pokurt
 
