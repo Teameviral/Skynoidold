@@ -25,4 +25,5 @@ To get your `SESSION`:
 # Credit
 Main Credit Goes to Pokurt
 
-![Pokurt](https://GitHub.com/pokurt)
+* [Pokurt](https://GitHub.com/pokurt)
+
