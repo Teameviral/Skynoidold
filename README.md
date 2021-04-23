@@ -16,6 +16,9 @@ A Modular Pyrogram Based Telegram Userbot with an Assistant
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeamEviral/Skynoid)
 
+Heroku is suspending many userbots. Try to use different hosting server.
+
 # Credit
 Main Credit Goes to Pokurt
-![Pokurt](https://GitHub.com/Pokurt)
+
+![Pokurt](https://GitHub.com/pokurt)
