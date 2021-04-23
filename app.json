@@ -14,11 +14,11 @@
   "success_url": "t.me/Skynoidbot",
   "stack": "container",
   "env": {
-    "API_ID": {
+    "api_id": {
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-    "API_HASH": {
+    "api_hash": {
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
@@ -73,12 +73,62 @@
       "value": "True"
     },
     "SKYNOID_IMG": {
-      "description": "Use It As Default",
-      "value": "True"
+      "description": "Use A Telegraph Link of Your Dp",
+      "value": ""
     },
-    "TIME_COUNTRY": {
-      "description": "Your Time Zone",
-      "value": "None"
+    "time_country": {
+      "description": "Input Your Time Zone",
+      "value": "Kolkata"
+    },
+    "IBM_WATSON_CRED_URL": {
+      "description": "IBM HOST URL, visit https://t.me/skynoidsupport for more help",
+       "required": false
+    },
+    "IBM_WATSON_CRED_PASSWORD": {
+      "description": "IBM HOST PASSWORD, visit https://t.me/nanabotsupport for more help",
+      "required": false
+    },
+    "screenshotlayer_API": {
+      "description": "get the api key from https://screenshotlayer.com",
+      "required": false
+    },
+    "remove_bg_api": {
+      "description": "get your api key from https://remove.bg",
+      "required": false
+    },
+    "env": {
+      "description": "true if hosting on heroku",
+      "value": "true"
+    },
+    "SKYNOID_WORKER": {
+      "description": "Userbot Workers",
+      "value": "8",
+      "required": true
+    },
+    "ASSISTANT_WORKER": {
+      "description": "Assistant Workers",
+      "value": "5",
+      "required": true
+    },
+    "USERBOT_LOAD": {
+      "description": "Fill if you want to load up some modules for your userbot (separate with space)",
+      "required": false
+    },
+    "USERBOT_NOLOAD": {
+      "description": "Fill if you want to ignore some modules for your userbot (separate with space)",
+      "required": false
+    },
+    "ASSISTANT_LOAD": {
+      "description": "Fill if you want to load up some modules for your ASSISTANT (separate with space)",
+      "required": false
+    },
+    "ASSISTANT_NOLOAD": {
+      "description": "Fill if you want to ignore some modules for your ASSISTANT (separate with space)",
+      "required": false
+    },
+    "sw_api": {
+      "description": "read spamwatch documentation on how to get the API KEY https://docs.spamwat.ch",
+      "required": false
     },
     "USERBOT_SESSION": {
       "description": "Your String Session.",
